@@ -1,0 +1,50 @@
+// 全局样式入口：统一管理基础样式、布局样式与页面样式
+* {
+  box-sizing: border-box;
+}
+html, body, #app {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #f5f7fa; // Element Plus 默认浅灰背景
+  color: #333;
+}
+
+$color-primary: #409EFF; // Element Plus 默认主题色
+
+.page-index {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-pagination {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-avatar-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.item-image-thumb {
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+}

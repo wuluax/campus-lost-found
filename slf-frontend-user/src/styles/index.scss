@@ -1,0 +1,65 @@
+@use './transition.scss';
+
+:root {
+  --primary-color: #3b82f6;
+  --van-primary-color: var(--primary-color);
+  --van-blue: var(--primary-color);
+  --van-button-primary-background: var(--primary-color);
+  --van-button-primary-border-color: var(--primary-color);
+  --van-switch-on-background: var(--primary-color);
+  --van-tabbar-item-active-color: var(--primary-color);
+  --van-action-sheet-cancel-color: var(--primary-color);
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+a:focus,
+a:active,
+button,
+div,
+svg,
+span {
+  outline: none;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fc;
+}
+
+a {
+  color: var(--primary-color) !important;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:active,
+  &:hover {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+/* 安全区域底部间距 */
+.safe-area-pb {
+  padding-bottom: env(safe-area-inset-bottom);
+}

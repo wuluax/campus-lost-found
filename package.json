@@ -1,0 +1,9 @@
+{
+  "name": "school-lost-found-root",
+  "private": true,
+  "scripts": {
+    "dev": "node -e \"const { spawn } = require('child_process'); const path = require('path'); const root = process.cwd(); const admin = spawn('pnpm', ['-C', path.join(root, 'slf-frontend-admin'), 'dev'], { stdio: 'inherit', shell: true }); const user = spawn('pnpm', ['-C', path.join(root, 'slf-frontend-user'), 'dev'], { stdio: 'inherit', shell: true }); const exitHandler = (code) => { if (typeof code === 'number') process.exitCode = code; }; admin.on('exit', exitHandler); user.on('exit', exitHandler); const stopAll = () => { admin.kill('SIGINT'); user.kill('SIGINT'); }; process.on('SIGINT', stopAll); process.on('SIGTERM', stopAll);\"",
+    "dev:admin": "pnpm -C slf-frontend-admin dev",
+    "dev:user": "pnpm -C slf-frontend-user dev"
+  }
+}
