@@ -2,6 +2,16 @@
 
 一个全栈校园失物招领系统，支持物品发布、AI 智能匹配寻物、WebSocket 实时私信、通知推送，包含移动端用户应用和桌面端管理后台。
 
+## 系统截图
+
+### 登录 / 首页 / 物品详情 / 功能中心
+
+![screenshot-1](docs/screenshot-1.jpg)
+
+### 消息 / 我的 / 私信聊天 / AI 智能助手
+
+![screenshot-2](docs/screenshot-2.jpg)
+
 ## 功能特性
 
 - **失物/招领发布** — 发布丢失或拾到的物品，支持图片上传、分类、地点标记
@@ -30,7 +40,8 @@
 ├── slf-frontend-user/     # 移动端用户应用（Vant）
 ├── slf-frontend-admin/    # 桌面端管理后台（Element Plus）
 ├── docker-compose.yml     # Docker 编排
-└── 数据库/                 # SQL 脚本
+├── school_lost_found.sql  # 数据库 SQL 脚本
+└── docs/                  # 截图等文档资源
 ```
 
 ## 快速开始
@@ -51,7 +62,7 @@
 docker-compose up -d mysql redis
 ```
 
-或手动安装 MySQL 和 Redis，然后导入 `数据库/school_lost_found.sql`。
+或手动安装 MySQL 和 Redis，然后导入 `school_lost_found.sql`。
 
 ### 2. 配置后端
 
@@ -94,7 +105,7 @@ pnpm dev:admin   # 管理端 → http://localhost:5173
 首次使用需导入数据库：
 
 ```bash
-mysql -u root -p < 数据库/school_lost_found.sql
+mysql -u root -p < school_lost_found.sql
 ```
 
 主要数据表：
